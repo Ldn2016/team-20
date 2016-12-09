@@ -1,0 +1,23 @@
+{
+  "name": "innereye",
+  "version": "1.0.0",
+  "description": "",
+  "main": "play.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ldn2016/team-20.wiki.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ldn2016/team-20.wiki/issues"
+  },
+  "homepage": "https://github.com/Ldn2016/team-20.wiki#readme",
+  "dependencies": {
+    "csvtojson": "^1.0.3",
+    "xmlhttprequest": "^1.8.0"
+  }
+}
