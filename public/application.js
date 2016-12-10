@@ -18,6 +18,7 @@ $(function(){ // on dom ready
       style: cytoscape.stylesheet()
         .selector('node')
           .css({
+            'background-color': "white",
             'height': 80,
             'width': 80,
             'background-fit': 'cover',
