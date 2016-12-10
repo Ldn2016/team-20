@@ -54,6 +54,11 @@ this.server = http.createServer(function(req, res) {
       res.writeHead(200);
       res.end(img);
     })
+  } else if (req.url === '/img/inprogress') {
+    fs.readFile('./img/inProgress.png', function(err, img){
+      res.writeHead(200);
+      res.end(img);
+    })
   } else {
     res.writeHead(404);
     res.end();

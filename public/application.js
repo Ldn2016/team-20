@@ -88,6 +88,7 @@ $(function(){ // on dom ready
       var nodeData = this._private.data;
       if (nodeData.unlocked) {
         document.getElementById('frame').src = nodeData.link;
+        // update completed and get next step
       }
     });
   }
@@ -96,7 +97,7 @@ $(function(){ // on dom ready
    if (node.completed) {
      return '/img/completed'
    } else if (node.unlocked) {
-     return '/img/completed'
+     return '/img/inprogress'
    } else {
      return '/img/locked'
    }
