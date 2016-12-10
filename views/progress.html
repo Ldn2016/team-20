@@ -1,19 +1,16 @@
 <html>
 <head>
+  <!-- <script type="text/javascript" src="../lib/progressTracker.js"></script> -->
   <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
   <script type="text/javascript">
+    var dependency = require("../lib/progressTracker.js")
     google.charts.load('current', {'packages':['corechart']});
     google.charts.setOnLoadCallback(drawChart);
 
     function drawChart() {
-      var data = google.visualization.arrayToDataTable([
-        ['Past tests', 'scores'],
-        [1,  50],
-        [2,  60],
-        [3,  70],
-        [4,  80],
-        [5,  100]
-      ]);
+      var realData = [['Past tests', 'scores']]
+      realData.push(dependency.progressTracker())
+      var data = google.visualization.arrayToDataTable(realData);
 
       var options = {
         title: 'My Progress',
