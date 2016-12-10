@@ -6,11 +6,36 @@
     <meta name="viewport" content="user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, minimal-ui">
     <title>Images</title>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
-    <script src="http://cytoscape.github.io/cytoscape.js/api/cytoscape.js-latest/cytoscape.min.js"></script>
-    <script src="../public/index.js"></script>
+    <script src="../public/cytoscape.min.js"></script>
+    <script src="../public/application.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.2.1/material.indigo-pink.min.css">
+    <script defer src="https://code.getmdl.io/1.2.1/material.min.js"></script>
   </head>
   <body>
-    <div id="body"><iframe id="frame"></iframe></div>
-    <div id="cy"></div>
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+  <header class="mdl-layout__header">
+    <div class="mdl-layout__header-row">
+      <span class="mdl-layout-title">Inner Eye</span>
+      <div class="mdl-layout-spacer"></div>
+
+    </div>
+  </header>
+  <div class="mdl-layout__drawer">
+    <span class="mdl-layout-title">Inner Eye</span>
+    <nav class="mdl-navigation mdl-layout--large-screen-only">
+      <a class="mdl-navigation__link" href="">Link</a>
+      <a class="mdl-navigation__link" href="">Link</a>
+      <a class="mdl-navigation__link" href="">Link</a>
+      <a class="mdl-navigation__link" href="">Link</a>
+    </nav>
+  </div>
+  <main class="mdl-layout__content">
+    <div class="page-content"><div id="body"><iframe id="frame"></iframe></div>
+    <div id="cy"></div></div>
+  </main>
+</div>
+
+
   </body>
 </html>

@@ -4,27 +4,21 @@ body {
 
 #cy {
   height: 100%;
-  width: 100%;
+  width: 10%;
   position: absolute;
   left: 0;
   top: 0;
 }
 
-/*#eat {
-  position: absolute;
-  left: 1em;
-  top: 1em;
-  font-size: 1em;
-  z-index: -1;
-  color: #c88;
-}*/
-
 #frame{
-  width: 600px;
-  height: 600px;
+  padding-top: 10px;
+  padding-left: 20px;
+  position: relative;
+  width: 90%;
+  height: 650px;
+  left: 100px;
 }
 
 canvas{
   width: 100px;
-  
 }
