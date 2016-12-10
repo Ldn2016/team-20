@@ -10,15 +10,6 @@ body {
   top: 0;
 }
 
-/*#eat {
-  position: absolute;
-  left: 1em;
-  top: 1em;
-  font-size: 1em;
-  z-index: -1;
-  color: #c88;
-}*/
-
 #frame{
   width: 600px;
   height: 600px;
@@ -26,5 +17,5 @@ body {
 
 canvas{
   width: 100px;
-  
+
 }
