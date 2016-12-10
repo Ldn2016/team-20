@@ -99,6 +99,7 @@ $(function(){ // on dom ready
   }
  // on tap
  function getIMGurl(node) {
+   console.log(node);
    if (node.completed) {
      return '/img/completed';
    } else if (node.unlocked) {

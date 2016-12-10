@@ -1,10 +1,10 @@
 module.exports = {
 	"nodes": [{
 		"data": {
-			"id": "addition_1",
+			"id": "0",
 			"exid": "addition_1",
 			"link": "http://demo.learningequality.org/learn/khan/math/early-math/cc-early-math-counting-topic/cc-early-math-counting/counting-with-small-numbers/",
-			"completed": true,
+			"completed": false,
 			"unlocked": true
 		}
 	}, {
@@ -12,7 +12,7 @@ module.exports = {
 			"id": "1",
 			"link": "http://demo.learningequality.org/learn/khan/math/early-math/cc-early-math-counting-topic/cc-early-math-counting/counting-with-small-numbers/",
 			"completed": false,
-			"unlocked": true
+			"unlocked": false
 		}
 	}, {
 		"data": {
@@ -59,7 +59,7 @@ module.exports = {
 	}],
 	"edges": [{
 		"data": {
-			"source": "addition_1",
+			"source": "0",
 			"target": "1"
 		}
 	}, {

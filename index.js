@@ -37,7 +37,7 @@ this.server = http.createServer(function(req, res) {
     res.setHeader('Content-Type', 'application/jsonp');
     res.write(JSON.stringify(intial));
       res.end();
-  } else if (req.url === '/img/completed'&& req.method === 'GET') {
+  } else if (req.url === '/img/completed' && req.method === 'GET') {
     fs.readFile('./img/completed.png', function(err, img){
       res.writeHead(200);
       res.end(img);
