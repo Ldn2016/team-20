@@ -4,7 +4,7 @@
   "description": "",
   "main": "play.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "./node_modules/.bin/mocha --reporter spec"
   },
   "repository": {
     "type": "git",
@@ -17,9 +17,12 @@
   },
   "homepage": "https://github.com/Ldn2016/team-20.wiki#readme",
   "dependencies": {
+    "chai": "^3.5.0",
     "csvtojson": "^1.0.3",
     "digraphe": "^1.0.1",
     "firebase": "^3.6.3",
+    "mocha": "^3.2.0",
+    "request": "^2.79.0",
     "xmlhttprequest": "^1.8.0"
   }
 }
