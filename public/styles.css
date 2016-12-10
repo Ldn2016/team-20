@@ -2,6 +2,12 @@ body {
   font: 14px helvetica neue, helvetica, arial, sans-serif;
 }
 
+.welcome {
+  border: 2px grey solid;
+  border-radius: 10px;
+  background-color:
+}
+
 #cy {
   height: 100%;
   width: 10%;

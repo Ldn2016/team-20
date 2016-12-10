@@ -47,6 +47,11 @@ this.server = http.createServer(function(req, res) {
       res.writeHead(200);
       res.end(img);
     })
+  } else if (req.url === '/img/giphy' && req.method === 'GET') {
+    fs.readFile('./img/giphy.gif', function(err, img){
+      res.writeHead(200);
+      res.end(img);
+    })
   } else if (req.url === '/img/locked'&& req.method === 'GET') {
     fs.readFile('./img/locked.png', function(err, img){
       res.writeHead(200);
