@@ -94,11 +94,11 @@ $(function(){ // on dom ready
  // on tap
  function getIMGurl(node) {
    if (node.completed) {
-     return '/img/completed'
+     return '/img/completed';
    } else if (node.unlocked) {
-     return '/img/completed'
+     return '/img/completed';
    } else {
-     return '/img/locked'
+     return '/img/locked';
    }
  }
 
