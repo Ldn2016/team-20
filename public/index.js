@@ -68,13 +68,13 @@ var cy = cytoscape({
   elements: {
     nodes: [
       { data: { id: '0' , link: "http://demo.learningequality.org/learn/khan/math/early-math/cc-early-math-counting-topic/cc-early-math-counting/counting-with-small-numbers/" } },
-      { data: { id: '1' , link: "http://www.google.com" } },
-      { data: { id: '2' , link: "https://github.com" } },
-      { data: { id: '3' , link: "string0" } },
-      { data: { id: '4' , link: "string0" } },
-      { data: { id: '5' , link: "string0" } },
-      { data: { id: '6' , link: "string0" } },
-      { data: { id: '7' , link: "string0" } }
+      { data: { id: '1' , link: "http://www.google.com", completed: false } },
+      { data: { id: '2' , link: "https://github.com", completed: false } },
+      { data: { id: '3' , link: "string0", completed: false } },
+      { data: { id: '4' , link: "string0", completed: false } },
+      { data: { id: '5' , link: "string0", completed: false } },
+      { data: { id: '6' , link: "string0", completed: false } },
+      { data: { id: '7' , link: "string0", completed: false } }
     ],
     edges: [
       { data: { source: '0', target: '1' } },
