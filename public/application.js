@@ -1,4 +1,4 @@
-$(function(){ // on dom ready
+$(function() { 
   var state;
   var cy;
 
@@ -84,7 +84,7 @@ $(function(){ // on dom ready
     });
     cb();
   }
-  // cy init
+
   function cyTap() {
     cy.on('tap', 'node', function(){
       var nodeData = this._private.data;
@@ -98,7 +98,7 @@ $(function(){ // on dom ready
       console.log(state);
     });
   }
- // on tap
+
  function getIMGurl(node) {
    console.log(node);
    if (node.completed) {
@@ -111,4 +111,4 @@ $(function(){ // on dom ready
  }
 
 
-}); // on dom ready
+});
