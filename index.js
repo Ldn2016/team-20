@@ -34,6 +34,11 @@ this.server = http.createServer(function(req, res) {
       res.writeHead(200, {'Content-Type': 'text/css'});
       res.end(page);
     });
+  } else if  (req.url === '/public/cytoscape.min.js') {
+    fs.readFile('./public/cytoscape.min.js', {encoding: 'utf8'}, function(err, page){
+      res.writeHead(200, {'Content-Type': 'application/javascript'});
+      res.end(page);
+    });
   } else if (req.url === '/initial') {
     res.setHeader('Content-Type', 'application/json');
     res.write(JSON.stringify({ nodes: [
