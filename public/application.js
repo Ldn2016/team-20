@@ -1,4 +1,4 @@
-$(function() { 
+$(function() {
   var state;
   var cy;
 
@@ -6,7 +6,6 @@ $(function() {
     state = data;
     generateCytoscape(state, cyTap);
    });
-
 
   function generateCytoscape(data, cb) {
     cy = cytoscape({
