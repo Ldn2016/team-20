@@ -1,4 +1,3 @@
-//Converter Class
 var Converter = require("csvtojson").Converter;
 var fs = require('fs');
 
