@@ -1,12 +1,14 @@
 var Converter = require("csvtojson").Converter;
 var fs = require('fs');
 
-// module.exports = {
-  loadFromCSVFile= function(){
+module.exports = {
+  loadFromCSVFile: function(filename, tempfilename){
     var converter = new Converter({});
-    converter.fromFile("./exerciseLog.csv",function(err,result){
+    converter.fromFile(filename,function(err,result){
+      console.log(result)
+      console.log(err);
       string = JSON.stringify({data: result});
-      fs.writeFile("./tmp/data.json", string, function(err) {
+      fs.writeFile("./tmp/"+tempfilename+".json", string, function(err) {
           if(err) {
               return console.log(err);
           }
@@ -14,6 +16,6 @@ var fs = require('fs');
       });
     });
   };
-// }
+
 
 loadFromCSVFile();

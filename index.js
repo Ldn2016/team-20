@@ -10,6 +10,11 @@ this.server = http.createServer(function(req, res) {
       res.writeHead(200);
       res.end(page);
     })
+  } else if (req.url === '/help' && req.method === 'GET') {
+      fs.readFile('./views/help.html', {encoding: 'utf8'}, function(err, page){
+        res.writeHead(200);
+        res.end(page);
+      })
   } else if (req.url === '/nodes/new'&& req.method === 'POST') {
     var whole = "";
     req.on("data", (chunk) => {whole += chunk.toString()});
@@ -39,6 +44,11 @@ this.server = http.createServer(function(req, res) {
       res.end();
   } else if (req.url === '/img/completed' && req.method === 'GET') {
     fs.readFile('./img/completed.png', function(err, img){
+      res.writeHead(200);
+      res.end(img);
+    })
+  } else if (req.url === '/img/giphy' && req.method === 'GET') {
+    fs.readFile('./img/giphy.gif', function(err, img){
       res.writeHead(200);
       res.end(img);
     })
