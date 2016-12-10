@@ -22,7 +22,7 @@ this.server = http.createServer(function(req, res) {
           req.writeHead(200);
           req.end(whole)
         // }
-      })
+      // })
     });
   } else if  (req.url === '/public/index.js') {
     fs.readFile('./public/index.js', {encoding: 'utf8'}, function(err, page){
