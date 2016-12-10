@@ -4,3 +4,15 @@ The front end presents learning as a journey to further engage users.
 
 
 This project is by Tom Stuart, Tam Borine, Laura Wilson and Rebecca Pearce.
+
+To run locally:
+
+```git clone https://github.com/Ldn2016/team-20```
+
+```cd team-20```
+
+```npm install ```
+
+``` node data/parser.js ```
+
+```node server.js```
