@@ -19,6 +19,7 @@
   "dependencies": {
     "csvtojson": "^1.0.3",
     "digraphe": "^1.0.1",
+    "firebase": "^3.6.3",
     "xmlhttprequest": "^1.8.0"
   }
 }

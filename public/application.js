@@ -1,10 +1,11 @@
 $(function(){ // on dom ready
-
+  var state;
   var cy;
 
   $.get("http://localhost:3000/initial", function(data) {
-    generateCytoscape(data, cyTap);
-  });
+    state = data;
+    generateCytoscape(state, cyTap);
+   });
 
 
   function generateCytoscape(data, cb) {
@@ -87,13 +88,18 @@ $(function(){ // on dom ready
     cy.on('tap', 'node', function(){
       var nodeData = this._private.data;
       if (nodeData.unlocked) {
-        document.getElementById('frame').src = nodeData.link;
-        // update completed and get next step
+         $.post("http://localhost:3000/nodes/new", JSON.stringify(state), function(data){
+           state = JSON.parse(data);
+           document.getElementById('frame').src = nodeData.link;
+           generateCytoscape(state, cyTap)
+         })
       }
+      console.log(state);
     });
   }
  // on tap
  function getIMGurl(node) {
+   console.log(node);
    if (node.completed) {
      return '/img/completed';
    } else if (node.unlocked) {
