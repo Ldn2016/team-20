@@ -1,5 +1,5 @@
 module.exports = { nodes: [
-    { data: { id: '0' , link: "http://demo.learningequality.org/learn/khan/math/early-math/cc-early-math-counting-topic/cc-early-math-counting/counting-with-small-numbers/", completed: false, unlocked: true } },
+    { data: { id: '0' , link: "http://demo.learningequality.org/learn/khan/math/early-math/cc-early-math-counting-topic/cc-early-math-counting/counting-with-small-numbers/", completed: true, unlocked: true } },
     { data: { id: '1' , link: "http://demo.learningequality.org/learn/khan/math/early-math/cc-early-math-counting-topic/cc-early-math-counting/counting-with-small-numbers/", completed: false, unlocked: true } },
     { data: { id: '2' , link: "https://github.com", completed: false, unlocked: false } },
     { data: { id: '3' , link: "string0", completed: false, unlocked: false } },
