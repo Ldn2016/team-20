@@ -1,8 +1,8 @@
 var Converter = require("csvtojson").Converter;
 var fs = require('fs');
 
-module.exports = {
-  loadFromCSVFile: function(){
+// module.exports = {
+  loadFromCSVFile= function(){
     var converter = new Converter({});
     converter.fromFile("./exerciseLog.csv",function(err,result){
       string = JSON.stringify({data: result});
@@ -13,5 +13,6 @@ module.exports = {
           console.log("The file was saved!");
       });
     });
-  }
-};
+  };
+
+  loadFromCSVFile();
