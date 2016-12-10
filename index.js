@@ -1,7 +1,7 @@
 var http = require('http');
 var url = require('url');
 var fs = require('fs');
-var nodeCreator = require('./lib/nodeCreator.js');
+var nodeFinder = require('./lib/nodeFinder.js');
 
 this.server = http.createServer(function(req, res) {
   if (req.url === '/') {
@@ -13,17 +13,10 @@ this.server = http.createServer(function(req, res) {
     var whole = "";
     res.on("data", (chunk) => {whole += chunk.toString()});
     res.on("end", () => {
-      // nodeCreator.getNextNode(data, function(err, res) {
-      //   if (err) {
-      //     req.writeHead(400);
-      //     req.end(err)
-      //   }
-      //   else {
-          req.writeHead(200);
-          req.end(whole)
-        // }
-      // })
-    });
+      var updatedHistory = nodeFinder.updateWithNextNode(whole);
+      req.writeHead(200);
+      req.end(updatedHistory)
+    })
   } else if  (req.url === '/public/index.js') {
     fs.readFile('./public/index.js', {encoding: 'utf8'}, function(err, page){
       res.writeHead(200, {'Content-Type': 'application/javascript'});
