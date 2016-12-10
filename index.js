@@ -2,7 +2,7 @@ var http = require('http');
 var url = require('url');
 var fs = require('fs');
 var nodeFinder = require('./lib/nodeFinder.js');
-var intial = require('./data/initial.js')
+var intial = require('./data/initial.js');
 
 this.server = http.createServer(function(req, res) {
   if (req.url === '/' && req.method === 'GET') {
@@ -52,16 +52,26 @@ this.server = http.createServer(function(req, res) {
       res.writeHead(200);
       res.end(img);
     })
+  } else if (req.url === '/img/backgroundImage') {
+    fs.readFile('./img/backgroundImage.png', function(err, img){
+      res.writeHead(200);
+      res.end(img);
+    })
+  } else if (req.url === '/signin') {
+    fs.readFile('./views/signin.html', {encoding: 'utf8'}, function(err, page){
+    res.writeHead(200);
+    res.end(page);
+  });
   } else {
     res.writeHead(404);
     res.end();
   }
-})
+});
 
 exports.listen = function(){
   this.server.listen.apply(this.server, arguments);
-}
+};
 
 exports.close = function(callback) {
   this.server.close(callback);
-}
+};
