@@ -14,5 +14,6 @@ var fs = require('fs');
       });
     });
   };
+// }
 
-  loadFromCSVFile();
+loadFromCSVFile();

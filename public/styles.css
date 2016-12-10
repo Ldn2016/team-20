@@ -49,7 +49,14 @@ canvas{
  }
 
  .course-container {
+   position:absolute;
    display: flex;
+   background-image: url('../img/backgroundImage');
+   height: 100vh;
    justify-content: center;
    width: 100%;
  }
+
+.mdl-js-layout {
+  height: 0;
+}
