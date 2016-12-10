@@ -59,6 +59,11 @@ this.server = http.createServer(function(req, res) {
       res.writeHead(200);
       res.end(img);
     })
+  } else if (req.url === '/img/backgroundImage') {
+    fs.readFile('./img/backgroundImage.png', function(err, img){
+      res.writeHead(200);
+      res.end(img);
+    })
   } else if (req.url === '/signin') {
     fs.readFile('./views/signin.html', {encoding: 'utf8'}, function(err, page){
     res.writeHead(200);

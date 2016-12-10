@@ -36,6 +36,6 @@ canvas{
 
 .container {
    height: 100vh;
-   background-image: url("./background-image.jpeg");
+   background-image: url('../img/backgroundImage');
    margin-bottom: 0;
  }
