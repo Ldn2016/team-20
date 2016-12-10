@@ -86,7 +86,9 @@ $(function(){ // on dom ready
   function cyTap() {
     cy.on('tap', 'node', function(){
       var nodeData = this._private.data;
-      document.getElementById('frame').src = nodeData.link;
+      if (nodeData.unlocked) {
+        document.getElementById('frame').src = nodeData.link;
+      }
     });
   }
  // on tap
