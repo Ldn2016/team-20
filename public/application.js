@@ -97,7 +97,7 @@ $(function(){ // on dom ready
    if (node.completed) {
      return '/img/completed';
    } else if (node.unlocked) {
-     return '/img/inprogress'
+     return '/img/inprogress';
    } else {
      return '/img/locked';
    }
