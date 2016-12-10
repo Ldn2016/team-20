@@ -45,3 +45,24 @@ canvas{
    background-image: url('../img/backgroundImage');
    margin-bottom: 0;
  }
+
+ .mdl-grid {
+   display: flex;
+   justify-content: space-between;;
+   margin: 0 auto;
+   align-self: center;
+   width: 60%;
+ }
+
+ .course-container {
+   position:absolute;
+   display: flex;
+   background-image: url('../img/backgroundImage');
+   height: 100vh;
+   justify-content: center;
+   width: 100%;
+ }
+
+.mdl-js-layout {
+  height: 0;
+}

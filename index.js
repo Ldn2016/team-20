@@ -72,7 +72,27 @@ this.server = http.createServer(function(req, res) {
     res.writeHead(200);
     res.end(page);
   });
-  } else {
+} else if (req.url === '/options') {
+    fs.readFile('./views/categories.html', {encoding: 'utf8'}, function(err, page){
+    res.writeHead(200);
+    res.end(page);
+  });
+} else if (req.url === '/img/bookicon') {
+    fs.readFile('./img/bookicon.png', function(err, img){
+    res.writeHead(200);
+    res.end(img);
+  });
+} else if (req.url === '/img/calculator') {
+    fs.readFile('./img/calculator.png', function(err, img){
+    res.writeHead(200);
+    res.end(img);
+  });
+} else if (req.url === '/img/medkit') {
+    fs.readFile('./img/medkit.png', function(err, img){
+    res.writeHead(200);
+    res.end(img);
+  });
+} else {
     res.writeHead(404);
     res.end();
   }

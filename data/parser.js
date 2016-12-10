@@ -15,12 +15,7 @@ module.exports = {
           console.log("The file was saved!");
       });
     });
+  };
 
-  }
 
-// loadFromCSVFile("./data/exerciseLog.csv", 'data')
-
-// loadFromCSVFile("./data/allItems.csv", 'items_data')
-};
-
-  loadFromCSVFile();
+loadFromCSVFile();
