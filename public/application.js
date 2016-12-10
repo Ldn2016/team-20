@@ -42,35 +42,35 @@ $(function(){ // on dom ready
           })
         .selector('#0')
           .css({
-            'background-image': 'https://farm8.staticflickr.com/7272/7633179468_3e19e45a0c_b.jpg'
+            'background-image': getIMGurl(data.nodes[0].data)
           })
         .selector('#1')
           .css({
-            'background-image': 'https://farm2.staticflickr.com/1261/1413379559_412a540d29_b.jpg'
+            'background-image': getIMGurl(data.nodes[1].data)
           })
         .selector('#2')
           .css({
-            'background-image': 'https://farm4.staticflickr.com/3063/2751740612_af11fb090b_b.jpg'
+            'background-image': getIMGurl(data.nodes[2].data)
           })
       .selector('#3')
           .css({
-            'background-image': 'https://farm9.staticflickr.com/8316/8003798443_32d01257c8_b.jpg'
+            'background-image': getIMGurl(data.nodes[3].data)
           })
       .selector('#4')
           .css({
-            'background-image': 'https://farm6.staticflickr.com/5109/5817854163_eaccd688f5_b.jpg'
+            'background-image': getIMGurl(data.nodes[4].data)
           })
       .selector('#5')
           .css({
-            'background-image': 'https://farm7.staticflickr.com/6098/6224655456_f4c3c98589_b.jpg'
+            'background-image': getIMGurl(data.nodes[5].data)
           })
       .selector('#6')
           .css({
-            'background-image': 'https://farm1.staticflickr.com/231/524893064_f49a4d1d10_z.jpg'
+            'background-image': getIMGurl(data.nodes[6].data)
           })
       .selector('#7')
           .css({
-            'background-image': 'https://farm3.staticflickr.com/2660/3715569167_7e978e8319_b.jpg'
+            'background-image': getIMGurl(data.nodes[7].data)
           }),
 
       elements: data,
@@ -86,9 +86,21 @@ $(function(){ // on dom ready
   function cyTap() {
     cy.on('tap', 'node', function(){
       var nodeData = this._private.data;
-      document.getElementById('frame').src = nodeData.link;
+      if (nodeData.unlocked) {
+        document.getElementById('frame').src = nodeData.link;
+      }
     });
   }
  // on tap
+ function getIMGurl(node) {
+   if (node.completed) {
+     return '/img/completed';
+   } else if (node.unlocked) {
+     return '/img/completed';
+   } else {
+     return '/img/locked';
+   }
+ }
+
 
 }); // on dom ready

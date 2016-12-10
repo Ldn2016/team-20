@@ -4,18 +4,19 @@ body {
 
 #cy {
   height: 100%;
-  width: 100%;
+  width: 10%;
   position: absolute;
   left: 0;
   top: 0;
 }
 
 #frame{
+  position: relative;
   width: 600px;
   height: 600px;
+  left: 100px;
 }
 
 canvas{
   width: 100px;
-
 }
