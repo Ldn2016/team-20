@@ -13,15 +13,15 @@ this.server = http.createServer(function(req, res) {
     var whole = "";
     res.on("data", (chunk) => {whole += chunk.toString()});
     res.on("end", () => {
-      nodeCreator.getNextNode(data, function(err, res) {
-        if (err) {
-          req.writeHead(400);
-          req.end(err)
-        }
-        else {
+      // nodeCreator.getNextNode(data, function(err, res) {
+      //   if (err) {
+      //     req.writeHead(400);
+      //     req.end(err)
+      //   }
+      //   else {
           req.writeHead(200);
-          req.end(res)
-        }
+          req.end(whole)
+        // }
       })
     });
   } else if  (req.url === '/public/index.js') {
