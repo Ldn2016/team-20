@@ -2,6 +2,12 @@ body {
   font: 14px helvetica neue, helvetica, arial, sans-serif;
 }
 
+.welcome {
+  border: 2px grey solid;
+  border-radius: 10px;
+  color: grey;
+}
+
 #cy {
   height: 100%;
   width: 10%;
@@ -12,13 +18,30 @@ body {
 
 #frame{
   padding-top: 10px;
-  padding-left: 20px;
+  padding-left: 10px;
   position: relative;
   width: 90%;
-  height: 650px;
+  height: 600px;
   left: 100px;
 }
 
 canvas{
-  width: 100px;
+  width: 10%;
 }
+
+.center-item {
+  text-align: center;
+  position:relative;
+  top: 50%;
+  left: 50%;
+  margin: -100px auto; /* -height/2 */
+  margin-left: -150px;
+  width:200px;
+  height:200px;
+}
+
+.container {
+   height: 100vh;
+   background-image: url('../img/backgroundImage');
+   margin-bottom: 0;
+ }
