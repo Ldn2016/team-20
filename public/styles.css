@@ -11,9 +11,11 @@ body {
 }
 
 #frame{
+  padding-top: 10px;
+  padding-left: 20px;
   position: relative;
-  width: 600px;
-  height: 600px;
+  width: 90%;
+  height: 650px;
   left: 100px;
 }
 
