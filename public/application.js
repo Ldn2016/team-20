@@ -7,7 +7,7 @@ $(function() {
     generateCytoscape(state, cyTap);
    });
 
-  function generateCytoscape(data, cb) {
+  function generateCytoscape(data, callback) {
     cy = cytoscape({
       container: document.getElementById('cy'),
 
@@ -81,7 +81,7 @@ $(function() {
         padding: 10
       }
     });
-    cb();
+    callback();
   }
 
   function cyTap() {
