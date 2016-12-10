@@ -94,12 +94,10 @@ $(function() {
            generateCytoscape(state, cyTap)
          })
       }
-      console.log(state);
     });
   }
 
  function getIMGurl(node) {
-   console.log(node);
    if (node.completed) {
      return '/img/completed';
    } else if (node.unlocked) {
