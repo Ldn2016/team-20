@@ -5,7 +5,7 @@ body {
 .welcome {
   border: 2px grey solid;
   border-radius: 10px;
-  background-color:
+  color: grey;
 }
 
 #cy {
