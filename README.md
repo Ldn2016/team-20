@@ -16,6 +16,4 @@ To run locally:
 
 ```npm install ```
 
-``` node data/parser.js ```
-
 ```node server.js```
